@@ -32,8 +32,8 @@ app.get("/*",(request, response)=>{
     response.sendFile(__dirname+"/views/not-found.html")
 })
 
-const projects= require('/projects.json')
-const articles= require('/articles.json')
+const projects= require('/api/projects.json')
+const articles= require('/api/articles.json')
 
 app.get("/api/projects",(request, response)=>{
     response.json(projects)
